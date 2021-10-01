@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/user_nav_bar_search"
+        android:checkable="false"
+        android:enabled="true"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Search"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/user_nav_bar_my_appointments"
+        android:checkable="false"
+        android:enabled="true"
+        android:icon="@drawable/ic_local_hospital_black_24dp"
+        android:title="My Appointments"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/user_nav_bar_my_doctors"
+        android:checkable="false"
+        android:enabled="true"
+        android:icon="@drawable/ic_people_black_24dp"
+        android:title="My Doctors"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/user_nav_bar_messages"
+        android:checkable="false"
+        android:enabled="true"
+        android:icon="@drawable/ic_message"
+        android:title="Messages"
+        android:visible="true" />
+
+</menu>

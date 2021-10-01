@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/doctor_offered_appointments"
+        android:checkable="false"
+        android:enabled="true"
+        android:icon="@drawable/ic_list_add"
+        android:title="Offered Appointments"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/doctor_upcoming_appointments"
+        android:checkable="false"
+        android:enabled="true"
+        android:icon="@drawable/ic_local_hospital_black_24dp"
+        android:title="Upcoming Appointments"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/doctor_patients"
+        android:checkable="false"
+        android:enabled="true"
+        android:icon="@drawable/ic_people_black_24dp"
+        android:title="Patients"
+        android:visible="true" />
+    <item
+        android:id="@+id/doctor_messages"
+        android:checkable="false"
+        android:enabled="true"
+        android:icon="@drawable/ic_message"
+        android:title="Messages"
+        android:visible="true" />
+</menu>

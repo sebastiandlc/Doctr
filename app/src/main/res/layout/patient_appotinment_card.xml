@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/patient_appointment_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:cardCornerRadius="3dp"
+        app:cardUseCompatPadding="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/accepted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:text="Pending..."
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/patient_appointment_dr_photo"
+                app:layout_constraintTop_toBottomOf="@+id/patient_appointment_dr_name"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/patient_appointment_dr_photo"
+                android:layout_width="54dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/patient_appointment_to"
+                app:srcCompat="@drawable/ic_person_black" />
+
+            <TextView
+                android:id="@+id/patient_appointment_speciality"
+                android:layout_width="wrap_content"
+                android:layout_height="39dp"
+                android:text="Speciality"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/patient_appointment_dr_name"
+                android:layout_width="137dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Dr. Name"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/patient_appointment_dr_photo"
+                app:layout_constraintEnd_toStartOf="@+id/patient_appointment_cancel"
+                app:layout_constraintStart_toEndOf="@+id/patient_appointment_dr_photo"
+                app:layout_constraintTop_toBottomOf="@+id/patient_appointment_end" />
+
+            <TextView
+                android:id="@+id/patient_appointment_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="$price"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/offered_appointment_speciality" />
+
+            <TextView
+                android:id="@+id/patient_appointment_location"
+                android:layout_width="166dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="4dp"
+                android:text="Location"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/patient_appointment_speciality" />
+
+            <TextView
+                android:id="@+id/patient_appointment_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:text="Date"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/patient_appointment_location"
+                app:layout_constraintTop_toBottomOf="@+id/patient_appointment_price" />
+
+            <TextView
+                android:id="@+id/patient_appointment_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:text="from"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/patient_appointment_location" />
+
+            <TextView
+                android:id="@+id/patient_appointment_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Start"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/patient_appointment_from"
+                app:layout_constraintTop_toBottomOf="@+id/patient_appointment_location" />
+
+            <TextView
+                android:id="@+id/patient_appointment_to"
+                android:layout_width="20dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:text="to"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/patient_appointment_start"
+                app:layout_constraintTop_toBottomOf="@+id/patient_appointment_location" />
+
+            <TextView
+                android:id="@+id/patient_appointment_end"
+                android:layout_width="44dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="8dp"
+                android:text="End"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.112"
+                app:layout_constraintStart_toEndOf="@+id/patient_appointment_to"
+                app:layout_constraintTop_toBottomOf="@+id/patient_appointment_location" />
+
+            <Button
+                android:id="@+id/patient_appointment_cancel"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="cancel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.707"
+                app:layout_constraintStart_toEndOf="@+id/accepted"
+                app:layout_constraintTop_toBottomOf="@+id/patient_appointment_end" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

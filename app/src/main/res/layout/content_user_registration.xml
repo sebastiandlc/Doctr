@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.group.poop.doctr.UserRegistration"
+    tools:showIn="@layout/activity_user_registration">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/personIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/firstNameLayout"
+            app:srcCompat="@drawable/ic_person_black" />
+
+        <ImageView
+            android:id="@+id/calendarIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/dobLayout"
+            app:srcCompat="@drawable/ic_calendar" />
+
+        <ImageView
+            android:id="@+id/genderIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/gender"
+            app:srcCompat="@drawable/ic_man_woman" />
+
+        <ImageView
+            android:id="@+id/chartIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/heightLayout"
+            app:srcCompat="@drawable/ic_clipboard" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/firstNameLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/personIcon"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="First Name"
+                android:inputType="textPersonName" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/heightLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/weightLayout"
+            app:layout_constraintStart_toEndOf="@+id/chartIcon"
+            app:layout_constraintTop_toBottomOf="@+id/gender">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Height (in)"
+                android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/weightLayout"
+            android:layout_width="163dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gender">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Weight (lbs)"
+                android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/dobLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/calendarIcon"
+            app:layout_constraintTop_toBottomOf="@+id/lastNameLayout">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Date of Birth"
+                android:clickable="true"
+                android:focusable="false"
+                android:inputType="none" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/lastNameLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/personIcon"
+            app:layout_constraintTop_toBottomOf="@+id/firstNameLayout">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Last Name" />
+        </android.support.design.widget.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toEndOf="@+id/genderIcon"
+            app:layout_constraintTop_toBottomOf="@+id/dobLayout">
+
+            <RadioButton
+                android:id="@+id/male"
+                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Male"
+                tools:layout_editor_absoluteX="80dp"
+                tools:layout_editor_absoluteY="243dp" />
+
+            <RadioButton
+                android:id="@+id/female"
+                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Female"
+                tools:layout_editor_absoluteX="143dp"
+                tools:layout_editor_absoluteY="243dp" />
+        </RadioGroup>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/allergiesLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="316dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/personIcon"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/allergiesTextEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Allergies"
+                android:inputType="textPersonName" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/medicationsLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="370dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/personIcon"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/medicationsTextEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Medications"
+                android:inputType="textPersonName" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/register"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="128dp"
+            android:elevation="2dp"
+            android:text="Register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weightLayout" />
+    </android.support.constraint.ConstraintLayout>
+
+
+
+
+</android.support.v4.widget.NestedScrollView>
